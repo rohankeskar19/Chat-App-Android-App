@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:background="@color/white"
+    >
+
+
+
+
+
+     <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:background="@color/white"
+         >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/freindProfileImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                >
+                <TextView
+                    android:id="@+id/freindNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="12dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:breakStrategy="simple"
+                    />
+                <TextView
+                    android:id="@+id/freindStatusTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="13sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/gray"
+                    android:breakStrategy="simple"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messagesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_above="@+id/relativeLayout"
+
+        >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:background="@color/lightGray"
+        >
+
+        <com.vanniktech.emoji.EmojiEditText
+            android:id="@+id/messageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:imeOptions="actionSend"
+            android:inputType="textCapSentences|textMultiLine"
+            android:layout_toLeftOf="@+id/sendButton"
+            android:layout_centerVertical="true"
+            android:background="@drawable/message_input_edit_text_bg"
+            android:hint="Type your message"
+            android:paddingLeft="10dp"
+            android:paddingRight="8dp"
+            />
+
+        <ImageView
+            android:id="@+id/sendButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_send"
+            android:padding="9dp"
+            android:gravity="center_horizontal|top"
+            android:background="@drawable/send_button_bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+
+
+            />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

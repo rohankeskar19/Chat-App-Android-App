@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Chat Application</string>
+    <string name="host">10.0.2.2</string>
+    <string name="protocol">http</string>
+
+    <string name="API_PORT">80</string>
+    <string name="SOCKET_PORT">4000</string>
+
+    <string name="placeholderImageUrl"></string>
+
+</resources>
